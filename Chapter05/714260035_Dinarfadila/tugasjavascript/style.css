@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.navbar {
+  background-color: orange;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;   
+  gap: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.beranda {
+  background-color: #ffe3d6;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.bagian {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+select {
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.produk {
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.gambar {
+  font-size: 50px;
+}
+
+.produk button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+ul {
+  list-style: none;
+  background-color: white;
+  border-radius: 8px;
+}
+
+li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+li button {
+  color: whitesmoke;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+h3 {
+  margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

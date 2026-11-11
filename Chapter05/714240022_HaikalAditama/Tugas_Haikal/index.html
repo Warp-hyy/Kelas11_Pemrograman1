@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ALECTO SHOP | Modern Shopping Experience</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#home" class="logo">ALECTO<span>.</span></a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#categories">Kategori</a>
+                <a href="#products">Produk</a>
+                <a href="#about">Tentang</a>
+            </nav>
+
+            <button class="cart-button" id="open-cart">
+                <span>♧ Keranjang</span>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">DISCOVER YOUR STYLE</span>
+
+                <h1>
+                    Belanja Lebih Mudah,
+                    <span>Gaya Lebih Berkelas.</span>
+                </h1>
+
+                <p>
+                    Temukan berbagai produk pilihan dengan kualitas terbaik
+                    dan harga menarik hanya di ALECTO SHOP.
+                </p>
+
+                <a href="#products" class="primary-button">
+                    Jelajahi Produk <span>→</span>
+                </a>
+
+                <div class="hero-stats">
+
+                    <div>
+                        <h3>100%</h3>
+                        <p>Produk Pilihan</p>
+                    </div>
+
+                    <div>
+                        <h3>Easy</h3>
+                        <p>Shopping Experience</p>
+                    </div>
+
+                    <div>
+                        <h3>Best</h3>
+                        <p>Quality Products</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img
+                    src="assets/images/toko.jpg"
+                    alt="Interior toko ALECTO SHOP"
+                >
+
+                <div class="image-label">
+                    <span>NEW COLLECTION</span>
+                    <h3>Find Your Favorite</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROMOTION BANNER -->
+        <section class="promo-banner">
+
+            <div class="promo-content">
+
+                <span>THE BEST FOR YOU</span>
+
+                <h2>Upgrade Gaya dan Kebutuhanmu.</h2>
+
+                <p>
+                    Temukan berbagai koleksi pilihan dengan desain menarik
+                    dan harga bersahabat.
+                </p>
+
+                <a href="#categories">Lihat Koleksi →</a>
+
+            </div>
+
+            <div class="promo-decoration">A.</div>
+
+        </section>
+
+
+        <!-- CATEGORY SECTION -->
+        <section class="category-section" id="categories">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">EXPLORE COLLECTION</span>
+                    <h2>Belanja Berdasarkan Kategori</h2>
+                    <p>Pilih kategori sesuai kebutuhanmu.</p>
+                </div>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <button class="category-card active"
+                    data-category="all">
+
+                    <span class="category-icon">✦</span>
+                    <h3>Semua Produk</h3>
+                    <p>Explore everything</p>
+
+                </button>
+
+
+                <button class="category-card"
+                    data-category="fashion">
+
+                    <span class="category-icon">♧</span>
+                    <h3>Fashion</h3>
+                    <p>Style your day</p>
+
+                </button>
+
+
+                <button class="category-card"
+                    data-category="electronics">
+
+                    <span class="category-icon">⌁</span>
+                    <h3>Elektronik</h3>
+                    <p>Modern technology</p>
+
+                </button>
+
+
+                <button class="category-card"
+                    data-category="accessories">
+
+                    <span class="category-icon">◇</span>
+                    <h3>Aksesoris</h3>
+                    <p>Complete your look</p>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCTS SECTION -->
+        <section class="products-section" id="products">
+
+            <div class="section-heading product-heading">
+
+                <div>
+                    <span class="eyebrow">OUR COLLECTION</span>
+                    <h2>Koleksi Produk Kami</h2>
+                    <p id="product-description">
+                        Temukan berbagai produk terbaik dari koleksi kami.
+                    </p>
+                </div>
+
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Cari produk..."
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="product-grid" id="product-list">
+                <!-- Produk ditampilkan melalui JavaScript -->
+            </div>
+
+            <div class="empty-message" id="empty-message">
+                <h3>Produk tidak ditemukan</h3>
+                <p>Coba gunakan kata kunci atau kategori lainnya.</p>
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+        <section class="features-section">
+
+            <div class="feature-card">
+                <span>✦</span>
+                <h3>Produk Berkualitas</h3>
+                <p>Produk pilihan dengan kualitas terbaik.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>◇</span>
+                <h3>Belanja Praktis</h3>
+                <p>Temukan produk dengan mudah dan cepat.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>₨</span>
+                <h3>Harga Terjangkau</h3>
+                <p>Pilihan produk dengan harga bersahabat.</p>
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about-section" id="about">
+
+            <span class="eyebrow">ABOUT ALECTO</span>
+
+            <h2>Belanja Mudah, Pilihan Lebih Banyak.</h2>
+
+            <p>
+                ALECTO SHOP merupakan website toko online sederhana
+                yang menyediakan berbagai pilihan produk fashion,
+                elektronik, dan aksesoris dalam satu tempat.
+                Website ini dirancang untuk memberikan pengalaman
+                berbelanja yang praktis dan nyaman.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+                <a href="#home" class="logo footer-logo">
+                    ALECTO<span>.</span>
+                </a>
+
+                <p>
+                    Your style, your choice.
+                    Temukan produk favoritmu bersama kami.
+                </p>
+            </div>
+
+            <div>
+                <h3>Navigasi</h3>
+                <a href="#home">Home</a>
+                <a href="#categories">Kategori</a>
+                <a href="#products">Produk</a>
+                <a href="#about">Tentang</a>
+            </div>
+
+            <div>
+                <h3>Kategori</h3>
+                <a href="#products" data-footer-category="fashion">Fashion</a>
+                <a href="#products" data-footer-category="electronics">Elektronik</a>
+                <a href="#products" data-footer-category="accessories">Aksesoris</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 ALECTO SHOP. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- CART MODAL -->
+    <div class="cart-overlay" id="cart-modal">
+
+        <div class="cart-modal">
+
+            <div class="cart-header">
+
+                <div>
+                    <span class="eyebrow">YOUR SHOPPING</span>
+                    <h2>Keranjang Belanja</h2>
+                </div>
+
+                <button id="close-cart" class="close-button">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="cart-items" id="cart-items">
+                <!-- Isi keranjang melalui JavaScript -->
+            </div>
+
+
+            <div class="cart-summary">
+
+                <div class="total-row">
+                    <span>Total Belanja</span>
+                    <strong id="cart-total">Rp0</strong>
+                </div>
+
+                <button class="checkout-button" id="checkout-button">
+                    Checkout Sekarang →
+                </button>
+
+                <p>Checkout ini merupakan simulasi transaksi.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

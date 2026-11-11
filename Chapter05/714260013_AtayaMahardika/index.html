@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brother John &amp; Sons – Gourmet Burger Bandung</title>
+  <meta name="description" content="Burger artisan lokal asal Bandung: porsi mengenyangkan, bahan berkualitas, rasa konsisten.">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="topbar">
+    <a href="#beranda" class="logo">
+      <img src="assets/images/logo.png" alt="Brother John &amp; Sons">
+    </a>
+
+    <nav id="nav" aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#menu">Menu</a>
+      <a href="#reservasi">Reservasi</a>
+    </nav>
+
+    <button class="cart-btn" id="cartOpen" aria-label="Buka keranjang">
+      Pesanan <b id="cartCount">0</b>
+    </button>
+
+    <button class="burger-btn" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false">
+      <i></i><i></i><i></i>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="beranda">
+      <h1>Brother John <em>&amp;</em> Sons</h1>
+      <p class="lead">
+        Burger artisan dari Bandung. Roti empuk, patty tebal, porsi yang benar-benar bikin kenyang.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#menu">Lihat menu</a>
+        <a class="btn ghost" href="#reservasi">Pesan meja</a>
+      </div>
+
+      <!-- Logo besar di hero (dekorasi, logo utama ada di navbar) -->
+      <img class="hero-logo" src="assets/images/logo.png" alt="">
+    </section>
+
+    <!-- ===== Tentang ===== -->
+    <section class="section about" id="tentang">
+      <h2>Burger yang rasanya selalu sama enaknya</h2>
+      <p>
+        Brother John &amp; Sons adalah merek gourmet burger lokal Bandung. Kami dikenal karena rasa
+        yang konsisten dari satu kunjungan ke kunjungan berikutnya, bahan berkualitas tinggi, dan
+        porsi besar. Suasananya santai, tapi tetap berkelas.
+      </p>
+
+      <ul class="facts">
+        <li>
+          <strong>Rasa konsisten</strong>
+          Resep dan teknik masak yang sama di setiap piring.
+        </li>
+        <li>
+          <strong>Bahan pilihan</strong>
+          Daging, keju, dan sayur dipilih dengan standar tinggi.
+        </li>
+        <li>
+          <strong>Porsi mengenyangkan</strong>
+          Burger tebal dengan pilihan side dish yang melimpah.
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== Menu (kartu dibuat lewat script.js) ===== -->
+    <section class="section menu" id="menu">
+      <h2>Menu</h2>
+
+      <div class="filters" role="group" aria-label="Filter menu">
+        <button class="chip active" data-cat="all">Semua</button>
+        <button class="chip" data-cat="burger">Burger</button>
+        <button class="chip" data-cat="side">Side dish</button>
+        <button class="chip" data-cat="drink">Minuman</button>
+      </div>
+
+      <div class="grid" id="menuGrid"></div>
+    </section>
+
+    <!-- ===== Reservasi ===== -->
+    <section class="section booking" id="reservasi">
+      <h2>Pesan meja</h2>
+      <p>Isi data di bawah, kami hubungi untuk konfirmasi.</p>
+
+      <form id="bookForm" novalidate>
+        <label>
+          Nama lengkap
+          <input type="text" id="fName" autocomplete="name">
+          <small class="err" id="eName"></small>
+        </label>
+
+        <label>
+          Nomor WhatsApp
+          <input type="tel" id="fPhone" inputmode="numeric" autocomplete="tel">
+          <small class="err" id="ePhone"></small>
+        </label>
+
+        <label>
+          Tanggal
+          <input type="date" id="fDate">
+          <small class="err" id="eDate"></small>
+        </label>
+
+        <label>
+          Jumlah orang
+          <input type="number" id="fGuests" min="1" max="20" value="2">
+          <small class="err" id="eGuests"></small>
+        </label>
+
+        <button class="btn" type="submit">Kirim reservasi</button>
+        <p class="ok" id="bookOk" role="status"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p><strong>Brother John &amp; Sons</strong> – Bandung, Jawa Barat</p>
+    <p>MAKAN MAKAN MAKAN MAKAN MAKAN MAKAN.</p>
+  </footer>
+
+  <!-- ===== Keranjang pesanan (muncul dari kanan) ===== -->
+  <aside class="cart" id="cart" aria-label="Keranjang pesanan" aria-hidden="true">
+    <div class="cart-head">
+      <h3>Pesanan kamu</h3>
+      <button id="cartClose" aria-label="Tutup keranjang">&times;</button>
+    </div>
+
+    <ul id="cartList"></ul>
+    <p class="empty" id="cartEmpty">Belum ada pesanan. Tambahkan burger dari menu.</p>
+
+    <div class="cart-foot">
+      <p>Total <strong id="cartTotal">Rp 0</strong></p>
+      <button class="btn" id="checkout">Pesan sekarang</button>
+    </div>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

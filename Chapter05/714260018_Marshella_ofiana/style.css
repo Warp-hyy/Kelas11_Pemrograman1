@@ -1,0 +1,406 @@
+/* =================================
+   SHELLA SHOP - STYLE CSS
+================================= */
+
+/* PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f6f2;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* =================================
+   NAVIGASI
+================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #a67c52;
+    margin-left: 5px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #a67c52;
+}
+
+.nav-button {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #eee8df;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-button button:hover {
+    background-color: #a67c52;
+    color: white;
+}
+
+/* =================================
+   BAGIAN BERANDA
+================================= */
+
+.hero {
+    min-height: 500px;
+    padding: 60px 10%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.small-title {
+    color: #a67c52;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 25px;
+    color: #555555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #a67c52;
+}
+
+.hero-image {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =================================
+   BAGIAN KEUNGGULAN
+================================= */
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 45px 8%;
+    background-color: #eee8df;
+}
+
+.feature {
+    width: 280px;
+    text-align: center;
+    padding: 15px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #555555;
+}
+
+/* =================================
+   BAGIAN PRODUK
+================================= */
+
+.products {
+    padding: 70px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-title p {
+    color: #a67c52;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+}
+
+/* PENCARIAN PRODUK */
+
+.search-box {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.search-box input {
+    width: 320px;
+    max-width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #a67c52;
+}
+
+/* KARTU PRODUK */
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 290px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+}
+
+.product-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.category {
+    color: #a67c52;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.product-info h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.description {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.price {
+    color: #a67c52;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.addCart {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addCart:hover {
+    background-color: #a67c52;
+}
+
+/* =================================
+   BAGIAN TENTANG
+================================= */
+
+.about {
+    padding: 70px 20%;
+    text-align: center;
+    background-color: #eee8df;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.about p {
+    color: #555555;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #333333;
+    color: white;
+}
+
+footer h2 {
+    margin-bottom: 8px;
+}
+
+.copyright {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #cccccc;
+}
+
+/* =================================
+   DARK MODE
+================================= */
+
+.dark-mode {
+    background-color: #222222;
+    color: white;
+}
+
+.dark-mode .navbar,
+.dark-mode .product-card {
+    background-color: #333333;
+    color: white;
+}
+
+.dark-mode .hero,
+.dark-mode .features,
+.dark-mode .about {
+    background-color: #292929;
+}
+
+.dark-mode .menu a {
+    color: white;
+}
+
+.dark-mode .hero-text p,
+.dark-mode .feature p,
+.dark-mode .description,
+.dark-mode .about p {
+    color: #dddddd;
+}
+
+/* =================================
+   TAMPILAN RESPONSIF UNTUK HP
+================================= */
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 8%;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about {
+        padding: 50px 10%;
+    }
+}

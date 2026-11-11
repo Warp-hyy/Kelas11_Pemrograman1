@@ -1,0 +1,775 @@
+/* ===== VARIABEL WARNA & FONT ===== */
+:root {
+  /* Dark Theme */
+  --bg-dark: #0a0a0a;
+  --surface-dark: #1a1a1a;
+  --border-dark: #2a2a2a;
+  --text-dark: #e8e8e8;
+  --text-muted-dark: #888888;
+  --accent: #00ffcc;
+  --accent-hover: #00cc99;
+
+  /* Light Theme */
+  --bg-light: #ffffff;
+  --surface-light: #f5f5f5;
+  --border-light: #e0e0e0;
+  --text-light: #1a1a1a;
+  --text-muted-light: #666666;
+
+  /* Font */
+  --font-heading: 'JetBrains Mono', 'Space Mono', monospace;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ===== THEME CLASSES ===== */
+body.dark-theme {
+  --bg: var(--bg-dark);
+  --surface: var(--surface-dark);
+  --border: var(--border-dark);
+  --text: var(--text-dark);
+  --text-muted: var(--text-muted-dark);
+}
+
+body.light-theme {
+  --bg: var(--bg-light);
+  --surface: var(--surface-light);
+  --border: var(--border-light);
+  --text: var(--text-light);
+  --text-muted: var(--text-muted-light);
+}
+
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.navbar-menu {
+  display: none;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar-menu a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar-menu a:hover {
+  color: var(--accent);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  width: 1.5rem;
+  height: 2px;
+  background-color: var(--text);
+  transition: transform 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(0.5rem, 0.7rem);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(0.4rem, -0.6rem);
+}
+
+.navbar-menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--surface);
+  padding: 1.5rem;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: border-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ===== HERO ===== */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  padding: 0.75rem 2rem;
+  background-color: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+/* ===== KURSUS SECTION ===== */
+.kursus {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.kursus h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.kursus-toolbar {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background-color: rgba(0, 255, 204, 0.05);
+}
+
+.kursus-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.kursus-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.kursus-card:hover {
+  border-color: var(--accent);
+}
+
+.kursus-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.kursus-card p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.kursus-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.kursus-meta span {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.no-results {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem 1rem;
+  font-size: 1.1rem;
+}
+
+/* ===== KUIS SECTION ===== */
+.kuis {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.kuis h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.quiz-container {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2rem;
+}
+
+.quiz-question {
+  margin-bottom: 2rem;
+}
+
+.quiz-number {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.quiz-question h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.quiz-option input[type="radio"] {
+  margin-right: 1rem;
+  cursor: pointer;
+  accent-color: var(--accent);
+}
+
+.quiz-option:hover {
+  border-color: var(--accent);
+}
+
+.quiz-option.selected {
+  border-color: var(--accent);
+  background-color: rgba(0, 255, 204, 0.05);
+}
+
+.quiz-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.quiz-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.quiz-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.quiz-btn.primary {
+  background-color: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.quiz-btn.primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.quiz-result {
+  text-align: center;
+  padding: 2rem;
+}
+
+.quiz-result h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.quiz-score {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.quiz-message {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* ===== PROGRESS SECTION ===== */
+.progress {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.progress h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.progress-tracker {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--border);
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--accent);
+  width: 0%;
+  transition: width 0.3s;
+}
+
+.materi-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.checklist-item:hover {
+  border-color: var(--accent);
+}
+
+.checklist-item input[type="checkbox"] {
+  margin-right: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  accent-color: var(--accent);
+}
+
+.checklist-item span {
+  font-size: 1rem;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  max-width: 700px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar styling for dark theme */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.modal-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0;
+}
+
+.modal-close {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 1.25rem;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.modal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.modal-body p {
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.materi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.materi-list li {
+  padding: 0.75rem 1rem;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.materi-list li:before {
+  content: "▸ ";
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/* Materi item detail (judul + isi) */
+.materi-item {
+  padding: 1.25rem 1.5rem;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+.materi-item h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.materi-item p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0;
+}
+
+.materi-item code {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 0.85em;
+  color: var(--accent);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.modal-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.modal-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.modal-btn.primary {
+  background-color: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.modal-btn.primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+/* Buat card kursus clickable */
+.kursus-card {
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE (DESKTOP) ===== */
+@media (min-width: 768px) {
+  .navbar-menu {
+    display: flex !important;
+    position: static;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .kursus-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .kursus-toolbar {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .search-input {
+    flex: 1;
+  }
+
+  .filter-buttons {
+    flex-wrap: nowrap;
+  }
+
+  .quiz-buttons {
+    justify-content: flex-end;
+  }
+}

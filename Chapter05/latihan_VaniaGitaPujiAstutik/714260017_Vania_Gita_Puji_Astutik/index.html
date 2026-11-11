@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Pacitan - Wisata Pacitan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <h2>Explore<span>Pacitan.</span></h2>
+
+            <button class="menu-toggle" id="menuToggle">☰</button>
+
+            <ul id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#wisata">Wisata</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="subtitle">EXPLORE THE BEAUTY OF PACITAN</p>
+            <h1>Jelajahi Keindahan<br>Wisata Pacitan</h1>
+            <p>
+                Temukan keindahan pantai, goa, dan alam
+                yang menakjubkan di Pacitan, Jawa Timur.
+            </p>
+            <a href="#wisata" class="btn">Jelajahi Sekarang</a>
+        </div>
+    </section>
+
+    <!-- WISATA -->
+    <section class="wisata" id="wisata">
+        <div class="section-title">
+            <p>DESTINASI PILIHAN</p>
+            <h2>Wisata Populer Pacitan</h2>
+            <span>Temukan tempat indah untuk liburanmu.</span>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari tempat wisata..."
+            >
+        </div>
+
+        <!-- FILTER -->
+        <div class="filter">
+            <button class="filter-btn active" data-category="semua">
+                Semua
+            </button>
+            <button class="filter-btn" data-category="pantai">
+                Pantai
+            </button>
+            <button class="filter-btn" data-category="goa">
+                Goa
+            </button>
+            <button class="filter-btn" data-category="sungai">
+                Sungai
+            </button>
+        </div>
+
+        <!-- CARD WISATA -->
+        <div class="wisata-container" id="wisataContainer">
+
+            <div class="card" data-category="pantai"
+                data-name="Pantai Klayar">
+                <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
+                    alt="Pantai Klayar">
+                <div class="card-content">
+                    <h3>Pantai Klayar</h3>
+                    <p>Pesona pasir putih dan batu karang yang indah.</p>
+                    <button class="detail-btn"
+                        data-name="Pantai Klayar"
+                        data-description="Pantai Klayar berada di Desa Sendang, Kecamatan Donorojo. Pantai ini terkenal dengan batu karang unik dan fenomena Seruling Samudera.">
+                        Lihat Detail
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-category="goa"
+                data-name="Goa Gong">
+                <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b"
+                    alt="Goa Gong">
+                <div class="card-content">
+                    <h3>Goa Gong</h3>
+                    <p>Keindahan goa dengan formasi batuan alami.</p>
+                    <button class="detail-btn"
+                        data-name="Goa Gong"
+                        data-description="Goa Gong berada di Desa Bomo, Kecamatan Punung. Goa ini terkenal dengan keindahan stalaktit dan stalagmitnya.">
+                        Lihat Detail
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-category="pantai"
+                data-name="Pantai Watu Karung">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                    alt="Pantai Watu Karung">
+                <div class="card-content">
+                    <h3>Watu Karung</h3>
+                    <p>Pantai dengan air laut biru dan karang eksotis.</p>
+                    <button class="detail-btn"
+                        data-name="Pantai Watu Karung"
+                        data-description="Pantai Watu Karung berada di kawasan Pringkuku, Pacitan. Pantai ini memiliki pasir putih dan pemandangan batu karang yang indah.">
+                        Lihat Detail
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-category="pantai"
+                data-name="Pantai Banyu Tibo">
+                <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda"
+                    alt="Pantai Banyu Tibo">
+                <div class="card-content">
+                    <h3>Banyu Tibo</h3>
+                    <p>Keunikan air terjun yang langsung menuju pantai.</p>
+                    <button class="detail-btn"
+                        data-name="Pantai Banyu Tibo"
+                        data-description="Pantai Banyu Tibo berada di Desa Widoro, Donorojo. Daya tarik utamanya adalah air terjun yang mengalir langsung ke kawasan pantai.">
+                        Lihat Detail
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-category="sungai"
+                data-name="Sungai Maron">
+                <img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2"
+                    alt="Sungai Maron">
+                <div class="card-content">
+                    <h3>Sungai Maron</h3>
+                    <p>Menikmati suasana sungai dengan pepohonan hijau.</p>
+                    <button class="detail-btn"
+                        data-name="Sungai Maron"
+                        data-description="Sungai Maron berada di kawasan Dersono, Pringkuku. Wisata ini terkenal dengan pengalaman menyusuri sungai yang dikelilingi pepohonan hijau.">
+                        Lihat Detail
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" data-category="pantai"
+                data-name="Pantai Srau">
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206"
+                    alt="Pantai Srau">
+                <div class="card-content">
+                    <h3>Pantai Srau</h3>
+                    <p>Pantai indah dengan pasir putih dan pemandangan laut.</p>
+                    <button class="detail-btn"
+                        data-name="Pantai Srau"
+                        data-description="Pantai Srau berada di Desa Candi, Kecamatan Pringkuku. Pantai ini memiliki hamparan pasir putih dan panorama laut yang indah.">
+                        Lihat Detail
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <p id="noResult" class="no-result">
+            Wisata tidak ditemukan.
+        </p>
+    </section>
+
+    <!-- MODAL DETAIL -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">×</button>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <button class="detail-btn" id="mapButton">
+                Lihat Lokasi
+            </button>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div>
+            <p class="subtitle">TENTANG PACITAN</p>
+            <h2>Pesona Alam Kota 1001 Goa</h2>
+            <p>
+                Pacitan merupakan salah satu kabupaten di Jawa Timur
+                yang memiliki keindahan alam luar biasa.
+                Mulai dari pantai, goa, hingga sungai yang
+                cocok untuk dikunjungi bersama keluarga dan teman.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Yuk, Jelajahi Pacitan!</h2>
+        <p>Temukan pengalaman liburan yang menyenangkan.</p>
+        <a href="https://banggapacitan.com/"
+            target="_blank" class="btn">
+            Informasi Wisata
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Explore Pacitan. Website Tugas Praktikum Pemrograman I.</p>
+    </footer>
+
+    <button id="topButton" title="Kembali ke atas">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

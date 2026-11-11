@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript dismpan di body</h2>
+    <p id="demo"></p>
+    
+    <button 
+ onclick="document.getElementById('myImage').src='../Chapter05/Asset/pic_bulboff.gif'"
+>
+ Nyalakan Lampunya
+</button>
+<img id="myImage" src="../Chapter05/Asset/pic_bulboff.gif" style="width: 100px" />
+<button
+ onclick="document.getElementById('myImage').src='../Chapter05/Asset/pic_bulbon.gif'"
+>
+ Matikan Lampunya
+</button>
+
+
+    <script>
+        document.getElementById("demo").innerHTML =
+"Selamat Datang, Hallo WOrld! saya belajar JavaScript"
+    </script>
+</body>
+</html>

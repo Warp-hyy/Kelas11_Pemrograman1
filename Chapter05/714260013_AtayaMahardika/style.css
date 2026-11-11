@@ -1,0 +1,607 @@
+/* ==========================================================
+    Brother John & Sons - style.css
+   ========================================================== */
+
+/* ---------- Variabel warna ---------- */
+:root {
+  --mustard: #f2b632;
+  --ink: #2b1810;
+  --red: #c23b22;
+  --paper: #fffdf7;
+  --pickle: #4f6b2e;
+  --line: #e7d9be;
+}
+
+/* ---------- Reset & dasar ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* biar judul tidak ketutup navbar */
+}
+
+body {
+  font-family: "Work Sans", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 2px;
+}
+
+/* ---------- Navbar ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.4rem 1.5rem;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.logo {
+  margin-right: auto;
+  line-height: 0;
+}
+
+.logo img {
+  display: block;
+  height: 64px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--mustard);
+}
+
+/* Tombol keranjang */
+.cart-btn {
+  padding: 0.45rem 1rem;
+  border: 0;
+  border-radius: 99px;
+  background: var(--mustard);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cart-btn b {
+  margin-left: 0.3rem;
+  padding: 0 0.5rem;
+  border-radius: 99px;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.cart-btn.bump {
+  animation: bump 0.3s;
+}
+
+@keyframes bump {
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+/* Tombol hamburger (hanya muncul di mobile) */
+.burger-btn {
+  display: none;
+  padding: 0.3rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.burger-btn i {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 5px 0;
+  background: var(--paper);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 78vh;
+  padding: 5rem 1.5rem 7rem;
+  overflow: hidden;
+  background: var(--mustard);
+}
+
+.hero h1 {
+  max-width: 10ch;
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  letter-spacing: -0.01em;
+}
+
+.hero em {
+  color: var(--red);
+  font-style: normal;
+}
+
+.lead {
+  max-width: 34rem;
+  margin: 1.2rem 0 2rem;
+  font-size: 1.2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Tombol umum */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--red);
+  background: var(--red);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn.ghost:hover {
+  color: var(--paper);
+}
+
+/* Logo besar di sisi kanan hero */
+.hero-logo {
+  position: absolute;
+  right: 6%;
+  bottom: 2.5rem;
+  width: min(320px, 38vw);
+  height: auto;
+  animation: drop 0.9s cubic-bezier(0.3, 1.4, 0.5, 1) both;
+}
+
+@keyframes drop {
+  from {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+}
+
+/* ---------- Section umum ---------- */
+.section {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.section h2 {
+  max-width: 20ch;
+  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+/* ---------- Tentang ---------- */
+.about p {
+  max-width: 60ch;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.facts li {
+  padding-top: 1rem;
+  border-top: 4px solid var(--red);
+}
+
+.facts strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
+/* ---------- Menu ---------- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.chip {
+  padding: 0.4rem 1.1rem;
+  border: 2px solid var(--ink);
+  border-radius: 99px;
+  background: transparent;
+  color: var(--ink);
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.chip.active,
+.chip:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.card.big {
+  grid-column: span 2;
+}
+
+.thumb {
+  height: 200px;
+  overflow: hidden;
+  background: var(--mustard);
+}
+
+.thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card.side .thumb {
+  background: #f7dda0;
+}
+
+.card.drink .thumb {
+  background: #cfe0b8;
+}
+
+.card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 1.2rem 1.2rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+}
+
+.card p {
+  flex: 1;
+  font-size: 0.92rem;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.price {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.add {
+  padding: 0.5rem 0.9rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add:hover {
+  background: var(--red);
+}
+
+/* ---------- Form reservasi ---------- */
+.booking {
+  border-top: 2px dashed var(--line);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  max-width: 640px;
+  margin-top: 1.5rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-weight: 500;
+}
+
+input {
+  padding: 0.65rem 0.8rem;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+}
+
+input.bad {
+  border-color: var(--red);
+}
+
+.err {
+  min-height: 1.1em;
+  color: var(--red);
+  font-weight: 400;
+}
+
+form .btn,
+.ok {
+  grid-column: 1 / -1;
+}
+
+form .btn {
+  justify-self: start;
+}
+
+.ok {
+  color: var(--pickle);
+  font-weight: 700;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2rem 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+}
+
+/* ---------- Keranjang (drawer) ---------- */
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  width: min(380px, 100%);
+  height: 100%;
+  padding: 1.2rem;
+  background: var(--paper);
+  transform: translateX(100%);
+  transition: transform 0.3s;
+}
+
+.cart.open {
+  transform: none;
+}
+
+.cart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cart-head button {
+  border: 0;
+  background: none;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#cartList {
+  flex: 1;
+  padding: 0;
+  overflow: auto;
+  list-style: none;
+}
+
+#cartList li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.2rem 0.8rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  grid-column: 1 / -1;
+}
+
+.qty button {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.empty {
+  color: #7a6a5c;
+}
+
+.cart-foot {
+  display: grid;
+  gap: 0.8rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--ink);
+}
+
+.cart-foot p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+/* Overlay gelap di belakang keranjang */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: rgba(43, 24, 16, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Notifikasi kecil di bawah layar */
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  z-index: 50;
+  max-width: 90vw;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--paper);
+  transform: translate(-50%, 200%);
+  transition: transform 0.3s;
+}
+
+.toast.show {
+  transform: translate(-50%, 0);
+}
+
+/* ---------- Responsif (layar kecil) ---------- */
+@media (max-width: 760px) {
+  .burger-btn {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--ink);
+    transition: max-height 0.3s;
+  }
+
+  nav.open {
+    max-height: 220px;
+  }
+
+  nav a {
+    padding: 0.9rem 1.5rem;
+    border-top: 1px solid #4a3328;
+  }
+
+  .hero {
+    padding-bottom: 12rem;
+  }
+
+  .hero-logo {
+    right: 50%;
+    width: 200px;
+    transform: translateX(50%);
+    animation: none;
+  }
+
+  .facts {
+    grid-template-columns: 1fr;
+  }
+
+  .card.big {
+    grid-column: auto;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Hormati pengguna yang mematikan animasi ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

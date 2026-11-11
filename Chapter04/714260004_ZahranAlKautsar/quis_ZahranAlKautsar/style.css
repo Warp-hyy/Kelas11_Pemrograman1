@@ -215,7 +215,7 @@ main:not(:has(table)):not(:has(form)) section:nth-of-type(2) p {
   font-size: 0.9rem;
 }
 
-/* layout halaman jadwal: 2 kolom ksimetris (sidebar Materi+ tabel acara) */
+/* layout halaman jadwal ,2 kolom ksimetris (sidebar Materi+ tabel acara) */
 main:has(table) {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -570,7 +570,7 @@ button[type="submit"] {
   width: 100%;
   background-color: var(--accent);
   color: #ffffff;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grsotesk', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   padding: 14px 24px;

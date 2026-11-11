@@ -1,0 +1,649 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f08c08;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+}
+
+.menu li a:hover {
+    color: #ff7800;
+}
+
+.kanan {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bahasa {
+    background-color: #211710;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.keranjang {
+    background-color: #211710;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.keranjang:hover {
+    background-color: #ff7800;
+}
+
+.konten {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+    background-color: #ffffff;
+    margin: 25px;
+    padding: 25px;
+    border-radius: 80px;
+    
+}
+
+.judul {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ff7800;
+    font-family: monospace;
+}
+
+.sub-judul {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: cursive;
+}
+
+.deskripsi {
+    font-size: 16px;
+    color: #666;
+}
+
+.tombol-belanja {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff7800;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    width: 200px;
+    align-self: center;
+}
+
+.gambar-produk {
+    width: 30%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.akhir {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.tombol-belanja-akhir {
+    background-color: #ff7800;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 50px;
+}
+
+.satu {
+    font-family: times ;
+}
+
+.dua {
+    font-family: serif ;
+}
+
+.Baju {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f98900;
+    color: #292929;
+}
+
+.Baju {
+    margin: 30px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.Baju h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #292929;
+}
+
+.Baju p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.Baju ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    list-style: none;
+}
+
+.Baju li {
+    background-color: #F8F5F0;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.Baju li:hover {
+    transform: translateY(-7px);
+}
+
+.Baju li img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.Baju .beli {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #D97745;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Baju .beli:hover {
+    background-color: #A9512D;
+}
+
+@media (max-width: 768px) {
+    .Baju ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .Baju ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+.Jaket {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f98900;
+    color: #292929;
+}
+
+.Jaket {
+    margin: 30px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.Jaket h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #292929;
+}
+
+
+.Jaket p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.Jaket ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    list-style: none;
+}
+
+.Jaket li {
+    background-color: #F8F5F0;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.Jaket li:hover {
+    transform: translateY(-7px);
+}
+
+.Jaket li img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.Jaket .beli {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #D97745;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Jaket .beli:hover {
+    background-color: #A9512D;
+}
+
+@media (max-width: 768px) {
+    .Jaket ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .Jaket ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+.Smartphone {
+    background-color: #F8F5F0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f98900;
+    color: #292929;
+}
+
+.Smartphone{
+    margin: 30px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.Smartphone h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #292929;
+}
+
+.Smartphone p {
+
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.Smartphone ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    list-style: none;
+}
+
+.Smartphone li {
+    background-color: #F8F5F0;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.Smartphone li:hover {
+    transform: translateY(-7px);
+}
+
+.Smartphone li img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.Smartphone .beli {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #D97745;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Smartphone .beli:hover {
+    background-color: #A9512D;
+}
+
+@media (max-width: 768px) {
+    .Smartphone ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .Smartphone ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+.kategori {
+    text-align: center;
+    padding: 80px 10%;
+    background: #fff3eb;
+}
+
+.kategori h1 {
+    color: #e87535;
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 40px 25px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ddd;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #e87535;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.kontak {
+    background: #fff3eb;
+    padding: 70px 10%;
+    text-align: center;
+}
+
+.kontak h1 {
+    color: #e87535;
+    margin-bottom: 15px;
+}
+
+.kontak-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.info {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    width: 300px;
+    box-shadow: 0 4px 15px #ddd;
+}
+
+.info h3 {
+    color: #e87535;
+    margin-bottom: 20px;
+}
+
+.info p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 400px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #e87535;
+}
+
+textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #e87535;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c85b24;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.tentang {
+    background: #fff3eb;
+    padding: 80px 10%;
+    min-height: 500px;
+}
+
+.content {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 45px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ddd;
+}
+
+.content h1 {
+    color: #e87535;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.content p {
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    color: #e87535;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content {
+        padding: 25px;
+    }
+}
+
+/* KURSOR UTAMA */
+.cursor {
+    width: 10px;
+    height: 10px;
+    background-color: #e87535;
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+}
+
+/* LINGKARAN LUAR */
+.cursor-outline {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #e87535;
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease;
+}
+
+/* EFEK HOVER */
+.cursor-outline.active {
+    width: 55px;
+    height: 55px;
+    background: rgba(232, 117, 53, 0.15);
+}
+
+/* EFEK KLIK */
+.cursor-outline.click {
+    width: 20px;
+    height: 20px;
+    background: rgba(232, 117, 53, 0.3);
+}
+
+/* JANGAN SEMBUNYIKAN KURSOR ASLI */
+body {
+    cursor: auto;
+}
+
+/* NONAKTIFKAN ANIMASI DI HP */
+@media (hover: none), (pointer: coarse) {
+    .cursor,
+    .cursor-outline {
+        display: none;
+    }
+}

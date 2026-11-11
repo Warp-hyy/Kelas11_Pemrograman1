@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ULBIMART</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <nav class="navbar">
+    <h2>ULBIMART</h2>
+    <div class="menu">
+      <a href="#beranda">Beranda</a>
+      <a href="#produk">Produk</a>
+      <a href="#keranjang">Keranjang (<span id="jumlah">0</span>)</a>
+      <a href="#tentang">Tentang</a>
+    </div>
+  </nav>
+
+  
+  <section id="beranda" class="beranda">
+    <h1>Selamat Datang di ULBIMART</h1>
+    <p>Belanja online mudah dan murah</p>
+  </section>
+
+  
+  <section id="produk" class="bagian">
+    <h2>Produk</h2>
+    <select id="kategori" onchange="tampilkanProduk()">
+      <option value="semua">Semua</option>
+      <option value="Fashion">Fashion</option>
+      <option value="Elektronik">Elektronik</option>
+    </select>
+    <div id="daftarProduk" class="grid"></div>
+  </section>
+
+  
+  <section id="keranjang" class="bagian">
+    <h2>Keranjang</h2>
+    <ul id="daftarKeranjang"></ul>
+    <h3>Total: <span id="total">Rp 0</span></h3>
+  </section>
+
+  
+  <section id="tentang" class="bagian">
+    <h2>Tentang</h2>
+    <p>Website online shop sederhana.</p>
+    <p>Dibuat oleh: Dinar Fadila (714260035)</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

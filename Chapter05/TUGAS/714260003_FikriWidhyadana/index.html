@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Kelontong</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navigasi Utama-->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Toko Abadi</h1>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <!-- Fitur JS 2 & 3: Indicator Keranjang & Tombol Modal -->
+            <button class="cart-btn" onclick="toggleCart()">🛒Keranjang (<span id="cart-count">0</span>)</button>
+            </button>
+        </nav>
+    </header> 
+
+    <!-- Banner Beranda-->
+     <section id="beranda" class="hero">
+        <h2>Selamat Datang di Toko Abadi</h2>
+        <p>Temukan produk terbaik untuk kebutuhan sehari-hari Anda.</p>
+     </section>
+
+     <!-- Area Produk -->
+      <main id="produk" class="container">
+        <h2>Produk Kami</h2>
+
+        <!-- Fitur JS 1: Filter Kategori -->
+         <div class="filter-container">
+            <button class="btn-filter" onclick="filterProduct('semua')">Semua</button>
+            <button class="btn-filter" onclick="filterProduct('sembako')">Sembako</button>
+            <button class="btn-filter" onclick="filterProduct('minuman')">Minuman</button>
+         </div>
+
+         <div class="product-grid">
+            <!-- Produk 1 -->
+             <div class="product-card sembako">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0mK7djVVabs9F51WqeoR-mMtBhzSme9fcawwOuLQT1g&s=10" alt="Beras 5kg">
+                <h3>Beras Premium 5kg</h3>
+                <p class="price">Rp 65.000</p>
+                <button class="btn-add" onclick="addToCart('Beras Premium 5kg', 65000)">Tambah ke Keranjang</button>
+             </div>
+
+             <!-- Produk 2 -->
+              <div class="product-card sembako">
+                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//99/MTA-51489404/tropical_tropical-minyak-goreng-1-liter-botol_full01.jpg" alt="Minyak Goreng 2L">
+                <h3>Minyak Goreng 2L</h3>
+                <p class="price">Rp 55.000</p>
+                <button class="btn-add" onclick="addToCart('Minyak Goreng 2L', 55000)">Tambah ke Keranjang</button>
+              </div>
+
+              <!-- Produk 3 -->
+                <div class="product-card minuman">
+                    <img src="https://coreimages.lottemart.co.id/ord/06/6b03c4fb-967e-443e-9bdb-1827e31e28e7.jpeg" alt="Teh Botol 500ml">
+                    <h3>Teh Botol 500ml</h3>
+                    <p class="price">Rp 5.000</p>
+                    <button class="btn-add" onclick="addToCart('Teh Botol 500ml', 5000)">Tambah ke Keranjang</button>
+                </div>
+
+                <!-- Produk 4 -->
+                <div class="product-card minuman">
+                    <img src="https://d3bbrrd0qs69m4.cloudfront.net/images/product/large/apotek_online_k24klik_20251013105021359225_Aqua-2.jpg" alt="Aqua 600ml">
+                    <h3>Aqua 600ml</h3>
+                    <p class="price">Rp 4.000</p>
+                    <button class="btn-add" onclick="addToCart('Aqua 600ml', 4000)">Tambah ke Keranjang</button>
+                </div>
+
+                <!-- Produk 5 -->
+                <div class="product-card sembako">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROolDqIA7yv3Wxv1gj6BudrBlH16NTrpR1o5xfMzCwxQ&s=10" alt="Gula Pasir 1kg">
+                    <h3>Gula Pasir 1kg</h3>
+                    <p class="price">Rp 12.000</p>
+                    <button class="btn-add" onclick="addToCart('Gula Pasir 1kg', 12000)">Tambah ke Keranjang</button>
+                </div>
+
+                <!-- Produk 6 -->
+                <div class="product-card sembako">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeuG0n6h2K9kDvVtIKnnWUbZgrIZpvnGmII0fh2eeg4A&s=10" alt="Telur Ayam 1kg">
+                    <h3>Telur Ayam 1kg</h3>
+                    <p class="price">Rp 25.000</p>
+                    <button class="btn-add" onclick="addToCart('Telur Ayam 1kg', 25000)">Tambah ke Keranjang</button>
+                </div>
+
+                <!-- Produk 7 -->
+                <div class="product-card minuman">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWpK7giPP9j2jltAiE5cdDAqwwXN0o0PxPHwiej19scw&s=10" alt="Kopi Instan 200g">
+                    <h3>Kopi Instan 200g</h3>
+                    <p class="price">Rp 30.000</p>
+                    <button class="btn-add" onclick="addToCart('Kopi Instan 200g', 30000)">Tambah ke Keranjang</button>
+                </div>
+
+                <!-- Produk 8 -->
+                <div class="product-card minuman">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDxpL__nqd2NpMvYc6_FYgQnDm_7-NIFM5HGfP3-KnA&s=10" alt="Susu UHT 1L">
+                    <h3>Susu UHT 1L</h3>
+                    <p class="price">Rp 20.000</p>
+                    <button class="btn-add" onclick="addToCart('Susu UHT 1L', 20000)">Tambah ke Keranjang</button>
+                </div>
+        </div>
+      </main>
+
+      <!-- Fitur JS 3: Modal Pop-Up Keranjang-->
+        <div id="cart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleCart()">&times;</span>
+                <h2>Keranjang Belanja</h2>
+                <ul id="cart-items"></ul>
+                  <li>Keranjang masih kosong.</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer id="kontak">
+            <p>&copy; 2026 Toko Abadi.</p>
+        </footer>
+
+        <script src="script.js"></script>
+</body>
+</html>

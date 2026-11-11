@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shella Shop</title>
+
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGASI ================= -->
+    <nav class="navbar">
+
+        <h1 class="logo">SHELLA<span>SHOP</span></h1>
+
+        <div class="menu">
+            <a href="#beranda">Beranda</a>
+            <a href="#produk">Produk</a>
+            <a href="#tentang">Tentang</a>
+        </div>
+
+        <div class="nav-button">
+            <button id="darkMode">🌙</button>
+
+            <button id="cartButton">
+                🛒 <span id="cartCount">0</span>
+            </button>
+        </div>
+
+    </nav>
+
+
+    <!-- ================= BERANDA ================= -->
+    <section id="beranda" class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-title">WELCOME TO SHELLA SHOP</p>
+
+            <h2>
+                Fashion Pilihan<br>
+                Untuk Gayamu
+            </h2>
+
+            <p>
+                Temukan berbagai pilihan pakaian yang nyaman,
+                modern, dan cocok untuk menemani aktivitas
+                sehari-hari.
+            </p>
+
+            <a href="#produk" class="btn">
+                Lihat Koleksi
+            </a>
+
+        </div>
+
+
+        <!-- Foto pakaian -->
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=80"
+                alt="Koleksi pakaian Shella Shop"
+            >
+        </div>
+
+    </section>
+
+
+    <!-- ================= KEUNGGULAN ================= -->
+    <section class="features">
+
+        <div class="feature">
+            <h3>✦ Produk Pilihan</h3>
+            <p>
+                Berbagai pilihan pakaian dengan desain menarik.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h3>♡ Belanja Mudah</h3>
+            <p>
+                Pilih dan tambahkan produk favorit ke keranjang.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h3>◈ Gaya Modern</h3>
+            <p>
+                Temukan fashion yang sesuai dengan gayamu.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUK ================= -->
+    <section id="produk" class="products">
+
+        <div class="section-title">
+            <p>OUR COLLECTION</p>
+            <h2>Koleksi Shella Shop</h2>
+        </div>
+
+
+        <!-- Pencarian produk -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari produk..."
+            >
+        </div>
+
+
+        <div class="product-container">
+
+
+            <!-- Produk 1 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=600&q=80"
+                        alt="Kemeja wanita"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <p class="category">CASUAL COLLECTION</p>
+
+                    <h3>Kemeja Casual</h3>
+
+                    <p class="description">
+                        Kemeja nyaman dengan desain sederhana
+                        untuk aktivitas sehari-hari.
+                    </p>
+
+                    <p class="price">Rp 150.000</p>
+
+                    <button class="addCart">
+                        + Tambah ke Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Produk 2 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80"
+                        alt="Jaket"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <p class="category">OUTER COLLECTION</p>
+
+                    <h3>Jaket Modern</h3>
+
+                    <p class="description">
+                        Jaket modern yang cocok untuk melengkapi
+                        gaya sehari-harimu.
+                    </p>
+
+                    <p class="price">Rp 250.000</p>
+
+                    <button class="addCart">
+                        + Tambah ke Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Produk 3 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=600&q=80"
+                        alt="Kaos"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <p class="category">BASIC COLLECTION</p>
+
+                    <h3>Kaos Basic</h3>
+
+                    <p class="description">
+                        Kaos simpel dan nyaman digunakan
+                        untuk berbagai kegiatan.
+                    </p>
+
+                    <p class="price">Rp 100.000</p>
+
+                    <button class="addCart">
+                        + Tambah ke Keranjang
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TENTANG ================= -->
+    <section id="tentang" class="about">
+
+        <p class="small-title">ABOUT US</p>
+
+        <h2>Shella Shop</h2>
+
+        <p>
+            Shella Shop adalah website online shop sederhana yang
+            menyediakan berbagai pilihan pakaian dengan gaya modern.
+            Website ini dibuat menggunakan HTML, CSS, dan JavaScript.
+        </p>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <h2>SHELLA SHOP</h2>
+
+        <p>Fashion Pilihan untuk Setiap Hari</p>
+
+        <p class="copyright">
+            © 2026 Shella Shop | Tugas JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

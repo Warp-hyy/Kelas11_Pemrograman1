@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jelajah Nusantara | Travel & Wisata</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Menghubungkan JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">Jelajah.</div>
+
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#destinasi">Destinasi</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="beranda">
+
+        <div class="hero-content">
+
+            <h1>
+                Temukan Keindahan Jawa Barat Bersama Kami.
+            </h1>
+
+            <p>
+                Jelajahi berbagai destinasi wisata menakjubkan,
+                nikmati keindahan alam, dan ciptakan pengalaman
+                perjalanan yang tidak terlupakan.
+            </p>
+
+            <p id="sapaan"></p>
+
+            <a href="#destinasi" class="btn">
+                Jelajahi Sekarang →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- DESTINASI WISATA -->
+    <section class="destinasi" id="destinasi">
+
+        <div class="section-title">
+
+            <h2>Destinasi Pilihan</h2>
+
+            <p>
+                Temukan tempat menarik untuk perjalanan berikutnya.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH DAN FILTER -->
+        <div class="search-filter">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari destinasi wisata..."
+            >
+
+            <select id="categoryFilter">
+
+                <option value="semua">Semua Kategori</option>
+
+                <option value="pantai">Pantai</option>
+
+                <option value="gunung">Gunung</option>
+
+                <option value="alam">Sejarah</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- DAFTAR KARTU WISATA -->
+        <div class="destination-container">
+
+
+            <!-- DESTINASI PANGANDARAN -->
+            <div class="card" data-category="pantai">
+
+                <img
+                    src="https://asita.id/wp-content/uploads/2024/08/pangandaran-pantai.jpg"
+                    alt="Wisata Pantai"
+                >
+
+                <div class="card-content">
+
+                    <span class="location">
+                        📍 Kabupaten Pangandaran
+                    </span>
+
+                    <h3>Pangandaran</h3>
+
+                    <p>
+                        Nikmati keindahan pantai, terbit dan terbenamnya matahari
+                        serta cita rasa makanan lokal.
+                    </p>
+
+                    <a
+                    href="https://maps.app.goo.gl/UaxS7CugmPGxrFJ8A"
+                    class="detail-btn">Lihat Selengkapnya →</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- DESTINASI GUNUNG PAPANDAYAN -->
+            <div class="card" data-category="gunung">
+
+                <img
+                    src="https://asset.kompas.com/crops/t5Dg5nmJNgL3PxX6zp3KmXIOTFI=/0x0:999x666/1200x800/data/photo/2021/08/25/61263bf38df6c.jpg"
+                    alt="Wisata Pegunungan"
+                >
+
+                <div class="card-content">
+
+                    <span class="location">
+                        📍 Garut
+                    </span>
+
+                    <h3>Gunung Papandayan</h3>
+
+                    <p>
+                        Gunung yang terkenal dengan
+                        kawah aktif dan pemandangan alamnya.
+                        
+                    </p>
+
+                    <a
+                    href="https://maps.app.goo.gl/ve5oAXc8Nczyh1ux7"
+                    class="detail-btn">Lihat Selengkapnya → </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- DESTINASI GEDUNG SATE -->
+            <div class="card" data-category="alam">
+
+                <img
+                    src="https://www.indonesia.travel/contentassets/0168ac84279d42e8b6d1457f9528fe0f/gedung-sate.webp"
+                    alt="Wisata Sejarah"
+                >
+
+                <div class="card-content">
+
+                    <span class="location">
+                        📍 Bandung
+                    </span>
+
+                    <h3>Gedung Sate</h3>
+
+                    <p>
+                        Ikon bersejarah Bandung dengan 
+                        arsitektur khas yang megah.
+                    </p>
+
+                    <a
+                    href="https://maps.app.goo.gl/yovVm7ppUDETsh5s9"
+                    class="detail-btn">Lihat Selengkapnya → </a>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- TENTANG KAMI -->
+    <section class="about" id="tentang">
+
+        <h2>Tentang Jelajah Jawa Barat</h2>
+
+        <p>
+            Jelajah Indonesia salah-satunya Jawa Barat merupakan website informasi wisata
+            yang hadir untuk memperkenalkan keindahan berbagai
+            destinasi di Indonesia. Kami ingin membantu setiap
+            pengunjung menemukan inspirasi perjalanan,
+            mengenal tempat baru, dan menikmati kekayaan alam
+            serta budaya Nusantara.
+        </p>
+
+    </section>
+
+
+    <!-- KONTAK -->
+    <section class="contact" id="kontak">
+
+        <h2>Mulai Petualanganmu!</h2>
+
+        <p>
+            Punya pertanyaan atau ingin mengetahui lebih banyak
+            tentang destinasi wisata?
+        </p>
+
+        <a
+            href="https://www.instagram.com/dimajzakan_?xtok=Y2hqOXlqcGR4N2lh"
+            class="btn"
+            target="_blank"
+>
+            Hubungi Kami
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © dimajtravel Wisata Jawa Barat. 2026.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

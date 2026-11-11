@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dikz Cafe - Cafe & Resto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigasi -->
+    <header class="navbar">
+        <div class="logo">☕ Dikz Cafe</div>
+        <nav>
+            <a href="#home">Beranda</a>
+            <a href="#menu">Menu</a>
+            <a href="#cart">Pesanan (<span id="cart-count">0</span>)</a>
+        </nav>
+        <!-- Fitur JS 1: Tombol Dark Mode -->
+        <button id="theme-toggle" class="btn-toggle">🌙 Mode Gelap</button>
+    </header>
+
+    <!-- Banner Utama -->
+    <section id="home" class="hero">
+        <h1>Nikmati Kopi Terbaik Hari Ini</h1>
+        <p>Tempat ternyaman buat santai, nugas, dan ngobrol bareng teman.</p>
+    </section>
+
+    <!-- Bagian Menu -->
+    <section id="menu" class="menu-section">
+        <h2>Daftar Menu Favorit</h2>
+
+        <!-- Fitur JS 2: Tombol Filter Kategori -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="all">Semua</button>
+            <button class="filter-btn" data-category="makanan">Makanan</button>
+            <button class="filter-btn" data-category="minuman">Minuman</button>
+        </div>
+
+        <!-- Daftar Kartu Menu -->
+        <div class="menu-grid">
+            <div class="menu-card" data-category="minuman">
+                <img src="https://asset.kompas.com/crops/oHA_InWvgjNnNKDmm3TszdEj0e0=/0x0:1000x667/1200x800/data/photo/2020/07/26/5f1d9e3132c94.jpg" alt="Espresso">
+                <h3>Kopi Susu Gula Aren</h3>
+                <p class="price">Rp 18.000</p>
+                <button class="btn-order" data-name="Kopi Susu Gula Aren" data-price="18000">+ Tambah</button>
+            </div>
+
+            <div class="menu-card" data-category="minuman">
+                <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2026/3/3/FNK_Matcha-Latte_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1772551789479.webp" alt="Matcha">
+                <h3>Matcha Latte</h3>
+                <p class="price">Rp 22.000</p>
+                <button class="btn-order" data-name="Matcha Latte" data-price="22000">+ Tambah</button>
+            </div>
+
+            <div class="menu-card" data-category="makanan">
+                <img src="https://thetastefulpantry.com/wp-content/webp-express/webp-images/uploads/2024/02/Beef-Burger-The-Tasteful-Pantry.jpg.webp" alt="Burger">
+                <h3>Beef Burger</h3>
+                <p class="price">Rp 30.000</p>
+                <button class="btn-order" data-name="Beef Burger" data-price="30000">+ Tambah</button>
+            </div>
+
+            <div class="menu-card" data-category="makanan">
+                <img src="https://images.themodernproper.com/production/posts/2022/Homemade-French-Fries_8.jpg?w=800&q=82&auto=format&fit=crop&dm=1662474181&s=70c29a2dbd0cfbac22bb3fdedf6fbd29" alt="Kentang Goreng">
+                <h3>French Fries</h3>
+                <p class="price">Rp 15.000</p>
+                <button class="btn-order" data-name="French Fries" data-price="15000">+ Tambah</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur JS 3: Ringkasan Total Pesanan -->
+    <section id="cart" class="cart-section">
+        <h2>Ringkasan Pesanan Kamu</h2>
+        <div class="cart-box">
+            <p>Total Item: <strong><span id="total-items">0</span> barang</strong></p>
+            <p>Total Tagihan: <strong><span id="total-price">Rp 0</span></strong></p>
+            <button id="btn-reset" class="btn-reset">Reset Pesanan</button>
+            <button id="btn-checkout" class="btn-checkout">Bayar Sekarang</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Dikz Cafe - Tugas Pemrograman Web</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

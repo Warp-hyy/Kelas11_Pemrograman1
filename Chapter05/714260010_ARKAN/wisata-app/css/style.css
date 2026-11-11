@@ -1,0 +1,392 @@
+/* ==================================================
+   FILE : css/style.css
+   FUNGSI : Mengatur seluruh tampilan (desain) halaman
+   TEMA  : Biru laut (#0ea5e9), kartu putih, font Poppins
+   ================================================== */
+
+/* ---------- 1. VARIABEL WARNA ---------- */
+:root {
+  --biru-utama : #0ea5e9;   /* warna utama biru laut  */
+  --biru-tua   : #0369a1;   /* biru gelap untuk teks tombol */
+  --biru-muda  : #e0f2fe;   /* latar biru sangat muda */
+  --teks-gelap : #1e293b;   /* warna teks utama       */
+  --abu        : #64748b;   /* teks sekunder          */
+  --garis      : #e2e8f0;   /* warna garis/border     */
+  --latar      : #f8fafc;   /* latar belakang halaman */
+  --putih      : #ffffff;
+  --hijau      : #10b981;   /* status sukses          */
+  --merah      : #ef4444;   /* status error           */
+}
+
+/* ---------- 2. PENGATURAN DASAR (RESET) ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* efek halus saat klik menu */
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  background-color: var(--latar);
+  color: var(--teks-gelap);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---------- 3. MENU NAVIGASI ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--putih);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+.navbar-isi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--biru-tua);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--biru-utama);
+}
+
+.menu {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--teks-gelap);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.menu a:hover {
+  color: var(--biru-utama);
+}
+
+/* ---------- 4. BAGIAN HERO ---------- */
+.hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  /* Gambar latar + lapisan gelap agar teks mudah dibaca */
+  background-image:
+    linear-gradient(rgba(3, 46, 74, 0.72), rgba(3, 46, 74, 0.72)),
+    url('../img/hero.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--putih);
+  padding-top: 80px;
+}
+
+.hero-label {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #bae6fd;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 46px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.hero-teks {
+  font-size: 17px;
+  max-width: 560px;
+  margin-bottom: 28px;
+  color: #e0f2fe;
+}
+
+/* ---------- 5. TOMBOL ---------- */
+.tombol {
+  display: inline-block;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.tombol-utama {
+  background-color: var(--biru-utama);
+  color: var(--putih);
+}
+
+.tombol-utama:hover {
+  background-color: var(--biru-tua);
+}
+
+.tombol-penuh {
+  width: 100%;
+}
+
+/* ---------- 6. SECTION UMUM ---------- */
+.section {
+  padding: 80px 0;
+}
+
+.section h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.sub-judul {
+  text-align: center;
+  color: var(--abu);
+  margin-bottom: 40px;
+}
+
+.latar-biru {
+  background-color: var(--biru-muda);
+}
+
+/* ---------- 7. KATALOG WISATA (GRID KARTU) ---------- */
+.grid-katalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.kartu {
+  background-color: var(--putih);
+  border-radius: 16px;
+  overflow: hidden;              /* gambar mengikuti sudut kartu */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.kartu:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(14, 165, 233, 0.22);
+}
+
+.kartu img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;             /* gambar terpotong rapi */
+}
+
+.kartu-badan {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-lokasi {
+  align-self: flex-start;
+  background-color: var(--biru-muda);
+  color: var(--biru-tua);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.kartu h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.kartu p {
+  font-size: 14px;
+  color: var(--abu);
+  flex: 1;
+  margin-bottom: 14px;
+}
+
+.kartu-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.harga {
+  color: var(--biru-utama);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.durasi {
+  font-size: 12px;
+  color: var(--abu);
+}
+
+/* ---------- 8. FORMULIR PEMESANAN ---------- */
+.kartu-form {
+  background-color: var(--putih);
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.baris-form {
+  margin-bottom: 18px;
+}
+
+.baris-dua {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.baris-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.baris-form input,
+.baris-form select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--garis);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--teks-gelap);
+  background-color: var(--putih);
+}
+
+.baris-form input:focus,
+.baris-form select:focus {
+  outline: none;
+  border-color: var(--biru-utama);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.baris-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--biru-muda);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 22px 0;
+  font-size: 15px;
+}
+
+.baris-total strong {
+  font-size: 20px;
+  color: var(--biru-tua);
+}
+
+/* ---------- 9. RIWAYAT PESANAN ---------- */
+.daftar-riwayat {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.item-riwayat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--putih);
+  border: 1px solid var(--garis);
+  border-left: 5px solid var(--biru-utama);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.info-pesanan h4 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.info-pesanan p {
+  font-size: 13px;
+  color: var(--abu);
+}
+
+.hapus {
+  background: none;
+  border: 1.5px solid var(--merah);
+  color: var(--merah);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hapus:hover {
+  background-color: var(--merah);
+  color: var(--putih);
+}
+
+.kosong {
+  text-align: center;
+  color: var(--abu);
+  background-color: var(--putih);
+  border: 1.5px dashed var(--garis);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+/* ---------- 10. FOOTER ---------- */
+.footer {
+  background-color: #0c4a6e;
+  color: var(--putih);
+  text-align: center;
+  padding: 32px 0;
+}
+
+.footer-kecil {
+  font-size: 13px;
+  color: #bae6fd;
+}
+
+/* ---------- 11. TAMPILAN HP (RESPONSIF) ---------- */
+@media (max-width: 640px) {
+  .menu { gap: 16px; }
+  .menu a { font-size: 13px; }
+  .hero h1 { font-size: 32px; }
+  .baris-dua { grid-template-columns: 1fr; }
+  .item-riwayat { flex-direction: column; align-items: flex-start; }
+}

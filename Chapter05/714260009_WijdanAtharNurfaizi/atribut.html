@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasar JavaScript</title>
+</head>
+<body>
+
+    <h2>Apa yang bisa dilakukan oleh JavaScript?</h2>
+    
+    <!-- Perbaikan: ID tidak boleh kembar, ganti id yang kedua -->
+    <p id="demo1">JavaScript bisa mengganti atribut dari value.</p>
+    <p id="demo2">Studi kasus disini JavaScript merubah nilai dari atribut sebuah gambar bola lampu</p>
+
+   <!-- Tombol Nyalakan -->
+<button type="button" onclick="document.getElementById('myImage').src='pic_bulbon.gif'">
+    Nyalakan Lampunya
+</button>
+
+<!-- Gambar Lampu (Hapus tulisan aset/) -->
+<img id="myImage" src="pic_bulboff.gif" style="width: 100px;" />
+
+<!-- Tombol Matikan (Hapus tulisan aset/) -->
+<button type="button" onclick="document.getElementById('myImage').src='pic_bulboff.gif'">
+    Matikan Lampunya
+</button>
+
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- ============================================== -->
+  <!--  BAGIAN 1 : KEPALA HALAMAN (HEAD)              -->
+  <!--  Berisi judul, font, dan pemanggilan CSS       -->
+  <!-- ============================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WisataNusantara - Aplikasi Travel &amp; Wisata</title>
+
+  <!-- Font Poppins dari Google Fonts (jika offline, otomatis pakai font bawaan) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Menghubungkan file CSS eksternal -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============================================== -->
+  <!--  BAGIAN 2 : MENU NAVIGASI (NAVBAR)             -->
+  <!-- ============================================== -->
+  <nav class="navbar">
+    <div class="container navbar-isi">
+      <a href="#beranda" class="logo">Wisata<span>Nusantara</span></a>
+      <ul class="menu">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#katalog">Katalog</a></li>
+        <li><a href="#pesan">Pesan</a></li>
+        <li><a href="#riwayat">Riwayat</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================== -->
+  <!--  BAGIAN 3 : BAGIAN PEMBUKA (HERO)              -->
+  <!-- ============================================== -->
+  <header id="beranda" class="hero">
+    <div class="container">
+      <p class="hero-label">Selamat Datang di WisataNusantara</p>
+      <h1>Jelajahi Keindahan<br>Indonesia Bersama Kami</h1>
+      <p class="hero-teks">
+        Pilih paket wisata favorit Anda, isi formulir pemesanan,
+        dan data pesanan langsung tersimpan di browser Anda.
+      </p>
+      <a href="#katalog" class="tombol tombol-utama">Lihat Paket Wisata</a>
+    </div>
+  </header>
+
+  <!-- ============================================== -->
+  <!--  BAGIAN 4 : KATALOG PAKET WISATA               -->
+  <!--  Kartu-kartu destinasi diisi oleh JavaScript   -->
+  <!-- ============================================== -->
+  <section id="katalog" class="section">
+    <div class="container">
+      <h2>Katalog Paket Wisata</h2>
+      <p class="sub-judul">Enam destinasi terbaik dari sabang sampai Merauke.</p>
+      <div id="daftar-katalog" class="grid-katalog">
+        <!-- Kartu destinasi dirender otomatis oleh js/script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!--  BAGIAN 5 : FORMULIR PEMESANAN                 -->
+  <!-- ============================================== -->
+  <section id="pesan" class="section latar-biru">
+    <div class="container">
+      <h2>Formulir Pemesanan</h2>
+      <p class="sub-judul">Isi data di bawah ini, total harga dihitung otomatis.</p>
+
+      <form id="form-pesanan" class="kartu-form">
+        <div class="baris-form">
+          <label for="input-nama">Nama Lengkap</label>
+          <input type="text" id="input-nama" placeholder="Contoh: Andi Pratama" required>
+        </div>
+
+        <div class="baris-form">
+          <label for="input-paket">Pilih Paket Wisata</label>
+          <select id="input-paket" required>
+            <option value="">-- Pilih paket terlebih dahulu --</option>
+            <!-- Opsi paket diisi otomatis oleh JavaScript -->
+          </select>
+        </div>
+
+        <div class="baris-dua">
+          <div class="baris-form">
+            <label for="input-tanggal">Tanggal Berangkat</label>
+            <input type="date" id="input-tanggal" required>
+          </div>
+          <div class="baris-form">
+            <label for="input-jumlah">Jumlah Orang</label>
+            <input type="number" id="input-jumlah" min="1" max="20" value="1" required>
+          </div>
+        </div>
+
+        <div class="baris-total">
+          <span>Total Harga</span>
+          <strong id="total-harga">Rp 0</strong>
+        </div>
+
+        <button type="submit" class="tombol tombol-utama tombol-penuh">Kirim Pesanan</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!--  BAGIAN 6 : RIWAYAT PESANAN                    -->
+  <!--  Data dibaca dari localStorage                 -->
+  <!-- ============================================== -->
+  <section id="riwayat" class="section">
+    <div class="container">
+      <h2>Riwayat Pesanan Anda</h2>
+      <p class="sub-judul">Pesanan tersimpan di browser (localStorage) dan tidak hilang saat halaman di-refresh.</p>
+      <div id="daftar-riwayat" class="daftar-riwayat">
+        <!-- Daftar pesanan dirender otomatis oleh js/script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!--  BAGIAN 7 : FOOTER                             -->
+  <!-- ============================================== -->
+  <footer class="footer">
+    <div class="container">
+      <p><strong>WisataNusantara</strong> &copy; 2026</p>
+      <p class="footer-kecil">Aplikasi pembelajaran HTML, CSS, dan JavaScript &mdash; data disimpan secara statis di localStorage.</p>
+    </div>
+  </footer>
+
+  <!-- Menghubungkan file JavaScript eksternal -->
+  <script src="js/script.js"></script>
+</body>
+</html>

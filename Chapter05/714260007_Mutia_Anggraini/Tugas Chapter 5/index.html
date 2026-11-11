@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content=":Luniscent Cafe:- tempat nyaman untuk menikmati kopi dan makanan favorit.">
+  <title>:Luniscent Cafe: | Coffee & Good Mood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="beranda">
+    <nav class="navbar container">
+      <a class="brand" href="#beranda">
+        <span class="brand-mark">
+          L
+        </span>
+        :Luniscent
+        <span>
+          cafe:.
+        </span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        ☰
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <a class="nav-cta" href="#menu">Lihat Menu</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">COFFEE • FOOD • GOOD MOOD</p>
+          <h1>Tempat singgah,<br><span>rasa yang berkesan.</span></h1>
+          <p class="hero-description">Nikmati kopi pilihan dan makanan favorit dalam suasana nyaman untuk setiap cerita.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#menu">Jelajahi Menu</a>
+            <a class="button button-ghost" href="#tentang">Kenali Kami</a>
+          </div>
+          <div class="hero-note">
+            <span class="dot">
+            </span> 
+            Dibuat dengan hati, disajikan setiap hari.
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Ilustrasi secangkir kopi">
+          <div class="art-glow"></div>
+          <div class="coffee-card">
+            <div class="coffee-steam">〰</div>
+            <div class="cup"><div class="coffee"></div><div class="cup-handle"></div></div>
+            <div class="saucer"></div>
+            <span class="art-label">your daily<br>happy place</span>
+          </div>
+          <div class="floating-bubble bubble-one">☕ Fresh coffee</div>
+          <div class="floating-bubble bubble-two">♡ Made with love</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">PILIHAN FAVORIT</p><h2>Menu <span>unggulan</span></h2></div>
+          <p>Temukan teman terbaik untuk menemani harimu.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filter kategori menu">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="coffee">Kopi</button>
+          <button class="filter-btn" data-filter="noncoffee">Non-Kopi</button>
+          <button class="filter-btn" data-filter="food">Makanan</button>
+        </div>
+        <div class="menu-grid" id="menuGrid">
+          <article class="menu-card" data-category="coffee">
+            <div class="menu-visual visual-latte"><span>☕</span></div>
+            <div class="menu-info"><div><h3>Blue Sea Latte</h3><p>Espresso, susu, dan sentuhan vanilla.</p></div><strong>Rp 25.000</strong></div>
+            <button class="add-btn" data-name="Blue Sea Latte">+ Tambah</button>
+          </article>
+          <article class="menu-card" data-category="coffee">
+            <div class="menu-visual visual-coffee"><span>🧋</span></div>
+            <div class="menu-info"><div><h3>Caramel Coffee</h3><p>Kopi lembut dengan saus karamel.</p></div><strong>Rp 28.000</strong></div>
+            <button class="add-btn" data-name="Caramel Coffee">+ Tambah</button>
+          </article>
+          <article class="menu-card" data-category="noncoffee">
+            <div class="menu-visual visual-matcha"><span>🍵</span></div>
+            <div class="menu-info"><div><h3>Matcha Cloud</h3><p>Matcha creamy dengan rasa autentik.</p></div><strong>Rp 27.000</strong></div>
+            <button class="add-btn" data-name="Matcha Cloud">+ Tambah</button>
+          </article>
+          <article class="menu-card" data-category="food">
+            <div class="menu-visual visual-food"><span>🥐</span></div>
+            <div class="menu-info"><div><h3>Butter Croissant</h3><p>Pastry renyah untuk teman kopi.</p></div><strong>Rp 20.000</strong></div>
+            <button class="add-btn" data-name="Butter Croissant">+ Tambah</button>
+          </article>
+          <article class="menu-card" data-category="food">
+            <div class="menu-visual visual-sandwich"><span>🥪</span></div>
+            <div class="menu-info"><div><h3>Chicken Sandwich</h3><p>Roti panggang dengan ayam dan sayur.</p></div><strong>Rp 32.000</strong></div>
+            <button class="add-btn" data-name="Chicken Sandwich">+ Tambah</button>
+          </article>
+          <article class="menu-card" data-category="noncoffee">
+            <div class="menu-visual visual-lemon"><span>🍋</span></div>
+            <div class="menu-info"><div><h3>Ocean Lemonade</h3><p>Minuman segar dengan lemon pilihan.</p></div><strong>Rp 22.000</strong></div>
+            <button class="add-btn" data-name="Ocean Lemonade">+ Tambah</button>
+          </article>
+        </div>
+        <p class="cart-status" id="cartStatus" aria-live="polite">Keranjang: 0 item</p>
+      </div>
+    </section>
+
+    <section class="about-section section" id="tentang">
+      <div class="container about-wrap">
+        <div class="about-visual"><div class="about-circle">L<span>cafe</span></div><p>Slow down.<br>Sip something good.</p></div>
+        <div class="about-copy"><p class="eyebrow">CERITA KAMI</p><h2>Lebih dari sekadar<br><span>secangkir kopi.</span></h2>
+          <p>:Luniscent Cafe: hadir sebagai ruang sederhana untuk beristirahat sejenak, bertukar cerita, belajar, atau menyelesaikan pekerjaan. Kami percaya hal kecil seperti secangkir minuman hangat bisa membuat hari terasa lebih baik.</p>
+          <div class="stats"><div><strong>Fresh</strong><span>Bahan pilihan</span></div><div><strong>Cozy</strong><span>Suasana nyaman</span></div><div><strong>Local</strong><span>Dukung lokal</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="kontak">
+      <div class="container contact-wrap">
+        <div><p class="eyebrow">SAPA KAMI</p><h2>Ada cerita<br>untuk dibagikan?</h2><p>Kirim pesan atau datang langsung. Kami tunggu kehadiranmu!</p>
+          <div class="contact-detail"><span>📍</span><p>Jl. sarimanah No. 70, Bandung</p></div>
+          <div class="contact-detail"><span>🕘</span><p>Setiap hari, 09.00–22.00 WIB</p></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">☕</div>
+          <h3>Yuk, mampir ke :Luniscent Cafe:!</h3>
+          <p>Nikmati minuman dan makanan favoritmu dalam suasana yang nyaman.</p>
+          <a class="button button-primary" href="https://wa.me/6282127844554">Hubungi Kami</a>
+          <small>Alamat dan jam operasional di sebelah kiri adalah informasi contoh.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#beranda">
+        <span class="brand-mark">
+          L
+        </span>
+          :Luniscent:
+        <span>
+          cafe.
+        </span>
+      </a>
+      <p>
+        ©
+        <span id="year">
+        </span> 
+        :Luniscent Cafe:. Dibuat untuk tugas Chapter 5 kelas pemograman.
+      </p>
+      <a href="#beranda">
+        Kembali ke atas ↑
+      </a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NgodingYuk - Platform Kursus Coding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <span class="logo-text">NgodingYuk</span>
+      </div>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="navbar-menu" id="navMenu">
+        <li><a href="#kursus">Kursus</a></li>
+        <li><a href="#kuis">Kuis</a></li>
+        <li><a href="#progress">Progress</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Ganti tema">◐</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Belajar Coding Dari Nol</h1>
+      <p>Platform pembelajaran interaktif dengan kursus praktis dan kuis langsung.</p>
+      <button class="cta-button" onclick="document.getElementById('kursus').scrollIntoView({behavior: 'smooth'})">Mulai Belajar</button>
+    </div>
+  </section>
+
+  <!-- Kursus -->
+  <section class="kursus" id="kursus">
+    <h2>Daftar Kursus</h2>
+    
+    <div class="kursus-toolbar">
+      <input type="text" id="searchInput" class="search-input" placeholder="Cari kursus...">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="semua">Semua</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="database">Database</button>
+      </div>
+    </div>
+
+    <div class="kursus-grid" id="kursusGrid">
+      <!-- Kartu kursus ditampilkan di sini via JavaScript -->
+    </div>
+    
+    <div class="no-results" id="noResults" style="display: none;">
+      <p>Kursus tidak ditemukan</p>
+    </div>
+  </section>
+
+  <!-- Kuis -->
+  <section class="kuis" id="kuis">
+    <h2>Kuis Interaktif</h2>
+    
+    <div class="quiz-container" id="quizContainer">
+      <!-- Soal kuis ditampilkan di sini via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Progress -->
+  <section class="progress" id="progress">
+    <h2>Progress Belajar</h2>
+    
+    <div class="progress-tracker">
+      <div class="progress-header">
+        <span>Materi Yang Sudah Dipelajari</span>
+        <span id="progressPercent">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      
+      <div class="materi-checklist">
+        <label class="checklist-item">
+          <input type="checkbox" class="materi-checkbox" data-materi="html">
+          <span>HTML & Semantic HTML</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="materi-checkbox" data-materi="css">
+          <span>CSS Dasar dan Responsive</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="materi-checkbox" data-materi="js">
+          <span>JavaScript & DOM</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="materi-checkbox" data-materi="git">
+          <span>Git & Version Control</span>
+        </label>
+        <label class="checklist-item">
+          <input type="checkbox" class="materi-checkbox" data-materi="api">
+          <span>REST API Dasar</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 NgodingYuk. Platform pembelajaran coding interaktif.</p>
+  </footer>
+
+  <!-- Modal Detail Kursus -->
+  <div class="modal" id="detailModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalJudul"></h2>
+        <button class="modal-close" onclick="tutupModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span id="modalKategori"></span>
+          <span id="modalLevel"></span>
+          <span id="modalDurasi"></span>
+        </div>
+        <p id="modalDeskripsi"></p>
+        
+        <h3 style="margin-top: 1.5rem; margin-bottom: 1rem;">Materi Pembelajaran:</h3>
+        <ul id="modalMateri" class="materi-list"></ul>
+        
+        <div class="modal-buttons" style="margin-top: 2rem;">
+          <button class="modal-btn" onclick="tutupModal()">Tutup</button>
+          <button class="modal-btn primary" onclick="mulaiPelajaran()">Mulai Belajar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
